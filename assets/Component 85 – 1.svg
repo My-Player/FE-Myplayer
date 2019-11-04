@@ -1,0 +1,11 @@
+<svg id="Component_85_1" data-name="Component 85 – 1" xmlns="http://www.w3.org/2000/svg" width="30" height="31.001" viewBox="0 0 30 31.001">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4e4e4e;
+      }
+    </style>
+  </defs>
+  <path id="Subtraction_3" data-name="Subtraction 3" class="cls-1" d="M-3792.807-2431H-3805l-.076-10.734-.943,1.111V-2431H-3814v-3a14.9,14.9,0,0,1,4.393-10.606A14.9,14.9,0,0,1-3799-2449a14.9,14.9,0,0,1,10.607,4.394A14.9,14.9,0,0,1-3784-2434v3h-7.788v-9.563l-1.019-1.171V-2431Z" transform="translate(3814 2462)"/>
+  <circle id="Ellipse_37" data-name="Ellipse 37" class="cls-1" cx="6" cy="6" r="6" transform="translate(9)"/>
+</svg>
