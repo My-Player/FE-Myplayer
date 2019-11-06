@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import {Text, ActivityIndicator} from 'react-native';
 import { useNavigation } from 'react-navigation-hooks';
 
-export default function ClubsPage(){
+export default function DrillsPage(){
     const navigation = useNavigation();
     return (
         <View style={{flex:1}}>

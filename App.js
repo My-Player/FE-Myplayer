@@ -1,14 +1,16 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
-import HomePage from './src/home';
-import ProfilePage from './src/profile';
-import NewsPage from './src/news';
-import InboxPage from './src/inbox';
+import { View, Image } from 'react-native';
+import HomePage from './src/Containers/home';
+import ProfilePage from './src/Containers/profile';
+import NewsPage from './src/Containers/news';
+import InboxPage from './src/Containers/inbox';
 import { createStackNavigator } from 'react-navigation-stack';
 import ClubsPage from './src/ButtonListHome/clubs';
 import PlayersPage from './src/ButtonListHome/players';
+import EventsPage from './src/ButtonListHome/events';
+import DrillsPage from './src/ButtonListHome/drills';
 
 const ClubButtonNavigator = createStackNavigator({      
   Clubs: {screen: ClubsPage, navigationOptions:{header:null}},
@@ -17,6 +19,15 @@ const ClubButtonNavigator = createStackNavigator({
 const PlayersButtonNavigator = createStackNavigator({
   Players: {screen: PlayersPage, navigationOptions:{header:null}},  
 })
+
+const EventsButtonNavigator = createStackNavigator({
+  Events: {screen: EventsPage, navigationOptions:{header:null}},
+})
+
+const DrillsButtonNavigator = createStackNavigator({
+  Drills: {screen: DrillsPage, navigationOptions:{header:null}},
+})
+
 
 const MainNavigator = createMaterialBottomTabNavigator({
   Home: {
@@ -68,7 +79,10 @@ const MainNavigator = createMaterialBottomTabNavigator({
 const route= createStackNavigator({
   Main: {screen: MainNavigator, navigationOptions:{header:null}},
   ClubNavigator: {screen: ClubButtonNavigator, navigationOptions:{headerTintColor:"white",headerStyle:{backgroundColor:"#15AEE8"}, headerTitle:'Clubs'}},
-  PlayersNavigator: {screen: PlayersButtonNavigator, navigationOptions:{headerTintColor:"white",headerStyle:{backgroundColor:"#15AEE8"}, headerTitle:'Players'},}
+  PlayersNavigator: {screen: PlayersButtonNavigator, navigationOptions:{headerTintColor:"white",headerStyle:{backgroundColor:"#15AEE8"}, headerTitle:'Players'}},
+  EventsNavigator: {screen: EventsButtonNavigator, navigationOptions:{headerTintColor:"white",headerStyle:{backgroundColor:"#15AEE8"}, headerTitle:'Events'}},
+  DrillsNavigator: {screen: DrillsButtonNavigator, navigationOptions:{headerTintColor:"white",headerStyle:{backgroundColor:"#15AEE8"}, headerTitle:'Drills'}}
+
 });
 
 const App = createAppContainer(route);

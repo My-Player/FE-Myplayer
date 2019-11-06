@@ -4,8 +4,8 @@ import { View } from 'react-native';
 import {Text, ActivityIndicator} from 'react-native';
 import { useNavigation } from 'react-navigation-hooks';
 
-export default function ClubsPage(){
-    const navigation = useNavigation();
+export default function EventsPage(){
+    // const navigation = useNavigation();
     return (
         <View style={{flex:1}}>
             <ActivityIndicator style={{flex:2}} size="large" color="#15AEE8" />
