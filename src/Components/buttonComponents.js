@@ -8,9 +8,7 @@ const ButtonComponents = ({nameButton, source, navigateTo, height, width, top, l
         buttonClubs: {
             height: 50,
             width: 50,
-            top: 20,
-            left: 30,
-            marginRight: 50,
+            top: 20,            
             backgroundColor: "white",
             shadowRadius: 10,
             borderRadius: 10,
@@ -24,7 +22,7 @@ const ButtonComponents = ({nameButton, source, navigateTo, height, width, top, l
     return (
         <View style={styles.buttonClubs} onTouchStart={() => navigate(navigateTo)}>
             <Image style={{ height: height, width: width, top: top, left: left }} resizeMode={resizeMode} source={source} />
-            <Text style={{ top: 20, textAlign: "center" }}>{nameButton}</Text>
+            <Text style={{ marginTop:20, textAlign: "center" }}>{nameButton}</Text>
         </View>
     );
 }

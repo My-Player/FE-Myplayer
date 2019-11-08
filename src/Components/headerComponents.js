@@ -11,11 +11,11 @@ const HeaderComponents = ({height, color}) => {
     })
     return (
         <View style={styles.header}>
-            {/* <Text style={styles.headerText}>My Player</Text> */}
+            {/* <Text style={{fontSize:35, fontWeight:"400", color:"white", alignSelf:"center"}}>My Player</Text>             */}
             <Image style={{
                 top: 20,
                 left: 111
-            }} source={require('../../assets/HeaderText.png')} />
+            }} source={require('../../assets/HeaderText.png')} />            
         </View>
     );
 }
