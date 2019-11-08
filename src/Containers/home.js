@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, Image, ScrollView } from 'react-native'
 // import { useNavigation } from 'react-navigation-hooks';
 import HeaderComponents from '../Components/headerComponents';
 import ButtonComponents from '../Components/buttonComponents';
+import { ImageSlider } from '../Components/imageSliderComponents';
 
 export default function HomePage() {
     return (
@@ -14,9 +15,9 @@ export default function HomePage() {
                         <Image style={{ borderRadius: 50, flex: 1, width: undefined, height: undefined }} resizeMode='cover' source={require('../../assets/LogoLakers.jpg')}></Image>
                     </View>
                     <View style={{ flex: 2, flexDirection: "column", marginLeft: 35 }}>
-                        <Text style={{ fontSize: 22, fontWeight: "400" }}>Lakers</Text>
+                        <Text style={{ fontSize: 22, fontWeight: "400" }}>Lakers Men</Text>
                         <Text style={{ fontSize: 16, fontWeight: "200", color: "#707070" }}>Banten</Text>                        
-                            <View style={{ marginTop: 10, borderBottomColor: 'black', borderBottomWidth: 1, minWidth:200,maxWidth:275}} />                        
+                            <View style={{ marginTop: 10, borderBottomColor: 'black', borderBottomWidth: 1, marginRight:10}} />                        
                     </View>
                 </View>
                 <View style={styles.buttonList}>
@@ -69,6 +70,9 @@ export default function HomePage() {
                 </View>
                 <View style={styles.cardEvent}>
                     <Text style={{ fontSize: 22, fontWeight: "bold", textAlign: "center", top: 5 }}>Events</Text>
+                    <View style={{margin:10, flex:1}}>
+                        <ImageSlider styles={styles.imageCardEvent}/>
+                    </View>
                     {/* <Image style={{height:385, width:135}} resizeMode="contain" source={require('../assets/drawable-xxhdpi/EventPicture.png')}></Image> */}
                 </View>
             </ScrollView>
@@ -76,18 +80,12 @@ export default function HomePage() {
     );
 }
 
-const styles = StyleSheet.create({
-    // header: {
-    //     backgroundColor: "#15AEE8",
-    //     paddingTop: 25,
-    //     height: 200
-    // },
-    card: {
-        flex: 1,
+const styles = StyleSheet.create({    
+    card: {        
         flexDirection: "row",
         marginTop: -100,
         marginLeft: 7,
-        width: 400,
+        marginRight: 7,        
         height: 200,
         backgroundColor: '#FFFFFF',
         shadowRadius: 10,
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: "#00000029",
-        shadowOffset: { height: 5, width: 0 },
+        shadowOffset: { height: 5, width: 6 },
         elevation: 10
 
     },
@@ -109,15 +107,18 @@ const styles = StyleSheet.create({
         borderColor: "#707070",
         borderWidth: 2
     },
-    buttonList: {
+    buttonList: {        
         flexDirection: "row",
-        height: 100
+        height: 100,
+        justifyContent:"space-around",
+        marginRight:7,
+        marginLeft:7
     },
     cardSchedule: {
         flex:1,
         marginTop: 15,
-        marginLeft: 7,
-        width: 400,
+        marginLeft: 7,   
+        marginRight:7,     
         height: 202,
         backgroundColor: '#FFFFFF',
         shadowRadius: 10,
@@ -128,12 +129,12 @@ const styles = StyleSheet.create({
         shadowOffset: { height: 5, width: 6 },
         elevation: 10,
     },
-    cardEvent: {
+    cardEvent: {        
         marginTop: 15,
         marginLeft: 7,
+        marginRight: 7,
         marginBottom: 15,
-        width: 400,
-        height: 202,
+        height: 200,
         backgroundColor: '#FFFFFF',
         shadowRadius: 10,
         borderRadius: 15,
@@ -143,6 +144,9 @@ const styles = StyleSheet.create({
         shadowOffset: { height: 5, width: 6 },
         elevation: 10,
     },
+    imageCardEvent: {             
+        alignSelf:"center",                      
+    }, 
     container: {
         flex: 1,
         backgroundColor: "black",
